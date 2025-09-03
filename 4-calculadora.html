@@ -179,16 +179,16 @@
           `}
           >
             <CalculatorDisplay operation="1+9" result="10" />
-
-            <div className="flex flex-col gap-3">
+            <div class="flex flex-col gap-3">
               {buttons.map((row, index) => (
                 <div key={`row-${index}`} className="flex gap-3">
                   {row.map((buttons) => (
                     <Button
-                      key={button.input}
-                      className={button.className || "w-16 h-16"}
+                      key={buttons.input}
+                      variant={buttons.variant}
+                      className={buttons.className || "w-16 h-16"}
                     >
-                      CE
+                      {buttons.input}
                     </Button>
                   ))}
                 </div>
